@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatsApp Navbar Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div id="full">
+  <div class="navbar">
+
+    <!-- Top Icons -->
+    <div class="nav-top">
+      <div class="nav-item" data-label="Chats">
+        <i data-lucide="message-square"></i>
+      </div>
+      <div class="nav-item" data-label="Status">
+        <i data-lucide="clock"></i>
+      </div>
+      <div class="nav-item" data-label="Communities">
+        <i data-lucide="users"></i>
+      </div>
+    </div>
+
+    <!-- Bottom Icons -->
+    <div class="nav-bottom">
+      <div class="nav-item" data-label="Settings">
+        <i data-lucide="settings"></i>
+      </div>
+      <div class="nav-item" data-label="Profile">
+        <i data-lucide="user-circle"></i>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- ========================================================================================= -->
+  
+ 
+  <!-- Chat List -->
+<div class="chat-sidebar">
+  <!-- Sidebar Header with CHATS, new chat and menu icons -->
+  <div class="chat-topbar">
+    <h2>CHATS</h2>
+    <div class="topbar-icons">
+      <i data-lucide="message-circle" title="New Chat"></i>
+
+  <!-- Menu container -->
+      <div class="menu-container" onclick="toggleMenu(event)">
+        <i data-lucide="more-vertical" title="Menu"></i>
+        <ul class="dropdown-menu" id="dropdownMenu">
+         <li>New Group</li>
+         <li>Starred Messages</li>
+          <li>Select Chats</li>
+         <li>Logout</li>
+         <li>Get WhatsApp for Windows</li>
+       </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search + Filters -->
+  <div class="chat-content-header">
+    <input type="text" placeholder="Search or start new chat" class="chat-search" />
+    <div class="filters">
+      <button class="active">All</button>
+      <button>Unread</button>
+      <button>Favourites</button>
+      <button>Groups</button>
+    </div>
+  </div>
+
+  <!-- Chat List -->
+  <div class="chat-list">
+    <!-- Chat items go here, same as before -->
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF2yaox2cALIq_yyd-9qEyovEsficJr7X9QQ&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">Amit Nehra</div>
+        <div class="message-show">thik hai </div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Zx8Reb9PlKADhesmtIQw2cBNStfadsBZ8g&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">Narender</div>
+        <div class="message-show">ok </div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGD0BcxwuvdI1H-S35GmT43vP2MBIdCgyeIA&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">sahil sharma</div>
+        <div class="message-show">Good morning</div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREG9mmIUWFL2UujK2qR4LsiY8Mb2oYAic2zg&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">Atul yadav</div>
+        <div class="message-show">tu kha se hai bhai</div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkGb0KXZff72_aNYCOMxSo3wBXLUugcSQItw&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">Anil kumar</div>
+        <div class="message-show">kal kiss time pr jaan ahai vha</div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKpoOr-PUnAljpxR2LCoihCZqdoGkXYrN5g&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">Birju kumar</div>
+        <div class="message-show">thakyou brother i 'm waiting</div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP4fNghY7Kx6eP79gmdp6YhesUm6GZGL53Rw&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">sunil nehra</div>
+        <div class="message-show">ok </div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0PDKrErulLlbJkbv5KtsCeICczdgJSyurA&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">pk sinha</div>
+        <div class="message-show">ke haal hai , konsi ...</div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHxzM_e4qVtnPZttfPhbjcPssC78WndotRPg&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">rajesh parjapat</div>
+        <div class="message-show">apni aassignment kr lo sabhi ...</div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <div class="chat-item">
+      <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJmFW_rzPyuJUmTEmTk9ZLB7u1CmTclyKCA&s"></div>
+      <div class="chat-info">
+        <div class="chat-name">sushil verma</div>
+        <div class="message-show">bhai kl mite hai okay...</div>
+      </div>
+      <div class="chat-time">12:55 PM</div>
+    </div>
+    <!-- Add more as needed -->
+  </div>
+</div> 
+ 
+<!-- =========================================================================================================== -->
+<!-- Main Content Area -->
+  <!-- <div class="main-content" id="mainContent">
+    <div class="welcome-message">
+      <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp Logo"
+      class="welcome-logo"
+      />
+      <h1>WhatsApp Web</h1>
+      <p>Send and receive messages without keeping your phone online.</p>
+      <p>Use WhatsApp on up to 4 linked devices and 1 phone at a time.</p>
+   </div>
+  </div>
+
+</div> -->
+<div class="main-chat">
+  <!-- HEADER -->
+  <div class="chat-header">
+    <div class="chat-user">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF2yaox2cALIq_yyd-9qEyovEsficJr7X9QQ&s" alt="User" />
+      <div class="user-info">
+        <h4>Amit nehra</h4>
+        <p>online</p>
+      </div>
+    </div>
+    <div class="chat-header-icons">
+      <i data-lucide="search"></i>
+      <i data-lucide="more-vertical"></i>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="chat-body">
+    <!-- Messages will appear here -->
+  </div>
+
+  <!-- FOOTER -->
+  <div class="chat-input-bar">
+    <i data-lucide="smile" class="icon"></i>
+    <i data-lucide="paperclip" class="icon"></i>
+
+    <form id="chatForm" class="chat-form">
+      <input type="text" id="chatInput" placeholder="Type a message" required />
+      <button type="submit" class="send-button" title="Mic">
+        <i data-lucide="send"></i>
+
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ------------------------------------ ************************************ ---------------------- -->
+
+
+
+
+
+<!-- ***************************************************************************************** -->
+<script>
+  const chatForm = document.getElementById('chatForm');
+const chatInput = document.getElementById('chatInput');
+const chatBody = document.querySelector('.chat-body');
+
+// v1 function to create a WhatsApp style message element
+function v1_createMessage(text) {
+  const msgDiv = document.createElement('div');
+  msgDiv.classList.add('chat-message');
+
+  // Message text span
+  const msgText = document.createElement('span');
+  msgText.textContent = text;
+  msgDiv.appendChild(msgText);
+
+  // Container for time and ticks
+  const infoDiv = document.createElement('div');
+  infoDiv.classList.add('message-info');
+
+  // Current time hh:mm AM/PM
+  const now = new Date();
+  let hours = now.getHours();
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12 || 12;
+  const timeStr = `${hours}:${minutes} ${ampm}`;
+
+  const timeSpan = document.createElement('span');
+  timeSpan.classList.add('time');
+  timeSpan.textContent = timeStr;
+
+  // Double blue ticks SVG (WhatsApp style)
+  const ticksSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  ticksSVG.setAttribute('class', 'ticks');
+  ticksSVG.setAttribute('viewBox', '0 0 16 15');
+  ticksSVG.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  ticksSVG.innerHTML = `
+    <path d="M15.817 3.33a.59.59 0 0 0-.86 0l-7.847 8.14-3.497-3.584a.59.59 0 0 0-.858.004l-.68.7a.58.58 0 0 0 0 .824l4.98 5.103c.12.12.27.179.427.18a.6.6 0 0 0 .43-.186l8.993-9.327a.586.586 0 0 0-.006-.837l-.032-.033zm-4.3-.388a.59.59 0 0 1 .86 0l.015.015a.59.59 0 0 1 .015.858l-7.56 7.844-3.273-3.364a.59.59 0 0 1 0-.83l.635-.651a.59.59 0 0 1 .842 0l2.703 2.778 6.563-6.8z"/>
+  `;
+
+  infoDiv.appendChild(timeSpan);
+  infoDiv.appendChild(ticksSVG);
+
+  msgDiv.appendChild(infoDiv);
+
+  return msgDiv;
+}
+
+// Handle form submit
+chatForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const message = chatInput.value.trim();
+  if (!message) return;
+
+  // Create message element with v1 structure
+  const newMsg = v1_createMessage(message);
+  chatBody.appendChild(newMsg);
+
+  // Scroll chat to bottom
+  chatBody.scrollTop = chatBody.scrollHeight;
+
+  // Clear input box
+  chatInput.value = '';
+});
+
+</script>
+<!-- ***************************************************************************************** -->
+
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+  function toggleMenu(event) {
+    event.stopPropagation(); // prevent click from bubbling
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  // Optional: Close dropdown when clicking outside
+  window.addEventListener("click", () => {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = "none";
+  });
+</script>
+
+<!-- ------------------------------------------------------------------------------------------------------- -->
+ <script>
+ // Select all chat items
+const chatItems = document.querySelectorAll('.chat-item');
+
+// Select the header image and name elements
+const headerImg = document.querySelector('.chat-header .chat-user img');
+const headerName = document.querySelector('.chat-header .user-info h4');
+
+chatItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Get the name text from clicked chat-item
+    const name = item.querySelector('.chat-name').textContent;
+
+    // Get avatar image src from clicked chat-item
+    const avatarSrc = item.querySelector('.avatar img').src;
+
+    // Update header img and name
+    headerImg.src = avatarSrc;
+    headerName.textContent = name;
+  });
+});
+
+</script>
+
+
+</body>
+</html>
