@@ -213,6 +213,37 @@
 
 <!-- ------------------------------------ ************************************ ---------------------- -->
 
+<script>
+  const chatItemss = document.querySelectorAll('.chat-item');
+  const chatName = document.querySelector('.chat-name'); // already inside .chat-header
+  const chatAvatar = document.querySelector('.chat-user img'); // avatar in .chat-header
+  const mainChat = document.querySelector('.main-chat');
+  const chatUser = document.querySelector('.chat-user');
+
+  // Show full chat on mobile
+  chatItemss.forEach(item => {
+    item.addEventListener('click', () => {
+      const name = item.querySelector('.chat-name').textContent;
+      const avatarSrc = item.querySelector('.avatar img').src;
+
+      chatName.textContent = name;
+      chatAvatar.src = avatarSrc;
+
+      if (window.innerWidth <= 600) {
+        mainChat.classList.add('active');
+        chatUser.setAttribute('data-back-visible', 'true');
+      }
+    });
+  });
+
+  // Back on mobile
+  document.querySelector('.chat-user').addEventListener('click', (e) => {
+    if (window.innerWidth <= 600 && chatUser.getAttribute('data-back-visible') === 'true') {
+      mainChat.classList.remove('active');
+      chatUser.removeAttribute('data-back-visible');
+    }
+  });
+</script>
 
 
 
