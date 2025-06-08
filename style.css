@@ -423,6 +423,37 @@ body {
 
 /* Responsive navbar for mobile */
 @media screen and (max-width: 600px) {
+.main-chat {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #ece5dd;
+    z-index: 2;
+    flex-direction: column;
+  }
+
+  .main-chat.active {
+    display: flex;
+  }
+
+  /* Make back button visible on mobile */
+  .chat-user::before {
+    content: "←";
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .chat-user[data-back-visible="true"]::before {
+    display: inline-block;
+  }
+
+  
   .navbar {
     flex-direction: row;
     height: 60px;
